@@ -3,6 +3,8 @@ import {Link} from "react-router-dom";
 function TakeOrder() {
   return (
     <>
+    <Layout>
+
       <main>
         <h2></h2>
         <p>
@@ -11,9 +13,10 @@ function TakeOrder() {
         </p>
       </main>
       <nav>
-        <Link to="/Home">Home</Link>
+        <Link to="/home">Home</Link>
         <Link to="/">Cerrar Sesión</Link>
       </nav>
+    </Layout>
     </>
   );
 }

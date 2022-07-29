@@ -1,6 +1,6 @@
 import { Routes, Route} from "react-router-dom";
 import './App.css';
-import LogIn from "./views/LogIn.jsx";
+import LogIn from "./views/Login/Login.jsx";
 import Home from "./views/Home.jsx";
 import TakeOrder from "./views/TakeOrder.jsx";
 import PrepareOrder from "./views/PrepareOrder.jsx";
@@ -11,10 +11,10 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<LogIn />} />
-        <Route path="Home" element={<Home />} />
-        <Route path="TakeOrder" element={<TakeOrder />} />
-        <Route path="PrepareOrder" element={<PrepareOrder />} />
-        <Route path="ServeOrder" element={<ServeOrder />} />
+        <Route path="home" element={<Home />} />
+        <Route path="take-order" element={<TakeOrder />} />
+        <Route path="prepare-order" element={<PrepareOrder />} />
+        <Route path="serve-order" element={<ServeOrder />} />
       </Routes>
     </div>
   );

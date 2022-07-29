@@ -7,9 +7,9 @@ function Home() {
         <p>You can do this, I believe in you.</p>
       </main>
       <nav>
-        <Link to="/TakeOrder">Tomar Pedido</Link>
-        <Link to="/PrepareOrder">Preparar Pedido</Link>
-        <Link to="/ServeOrder">Servir pedido</Link>
+        <Link to="/take-order">Tomar Pedido</Link>
+        <Link to="/prepare-Order">Preparar Pedido</Link>
+        <Link to="/serve-order">Servir pedido</Link>
         <Link to="/">Cerrar Sesión</Link>
       </nav>
     </>

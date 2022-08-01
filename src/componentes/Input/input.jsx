@@ -1,9 +1,9 @@
-const Input= ({type, placeholder}) => {
+// const Input= ({type, placeholder}) => {
 
-    return(
-      <div>
-        <input className="rounded-xl" type={type}  placeholder={placeholder}/>
-      </div>      
-    )
-}
-export default Input
+//     return(
+//       <div>
+//         <input className="rounded-xl" type={type}  placeholder={placeholder}/>
+//       </div>      
+//     )
+// }
+// export default Input

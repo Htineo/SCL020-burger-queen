@@ -11,6 +11,7 @@ function Home() {
         <Link to="/prepare-Order">Preparar Pedido</Link>
         <Link to="/serve-order">Servir pedido</Link>
         <Link to="/">Cerrar Sesión</Link>
+       
       </nav>
     </>
   );

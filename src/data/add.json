@@ -1,0 +1,25 @@
+[
+  {
+    "id": "1",
+    "name": "Papas fritas",
+    "price": "10$",
+    "img": "",
+    "type": "menuvegetariano"
+  },
+  {
+    "id": "2",
+    "name": "Extra de queso",
+    "price": "14$",
+    "img": "",
+    "type": "menuvegetariano"
+  },
+  {
+    "id": "3",
+    "name": "Papa a la huancainas",
+    "price": "18$",
+    "img": "",
+    "type": "menuvegetariano"
+  }
+  
+]
+

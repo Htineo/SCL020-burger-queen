@@ -1,0 +1,24 @@
+[
+  {
+    "id": "1",
+    "name": "Ceviche",
+    "price": "10$",
+    "img": "",
+    "type": "menuvegetariano"
+  },
+  {
+    "id": "2",
+    "name": "Lomo Saltado",
+    "price": "14$",
+    "img": "",
+    "type": "menuvegetariano"
+  },
+  {
+    "id": "3",
+    "name": "Causa Limeña",
+    "price": "18$",
+    "img": "",
+    "type": "menuvegetariano"
+  }
+  
+]

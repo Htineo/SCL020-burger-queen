@@ -1,0 +1,33 @@
+[
+  {
+    "id": "1",
+    "name": "Loco de zapallo",
+    "price": "10$",
+    "img": "src/assets/locro-de-zapallo-1-156770145.jpg",
+    "type": "menuPeruano"
+  },
+  {
+    "id": "2",
+    "name": "Ceviche Peruano",
+    "price": "14$",
+    "img": "src/assets/ceviche.jpg",
+    "type": "menuPeruano"
+  },
+  {
+    "id": "3",
+    "name": "Lomo saltado",
+    "price": "15$",
+    "img": "src/assets/lomo saltado.jpg",
+    "type": "menuPeruano"
+  },
+  {
+    "id": "4",
+    "name": "Papas a la Huancaina",
+    "price": "10$",
+    "img": "src/assets/Papa a la Huancaina.jpg",
+    "type": "menuPeruano"
+  }
+  
+]
+
+

@@ -2,8 +2,9 @@ import { Fragment } from "react";
 import { Link } from "react-router-dom";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
-
+import menuPeruvian from '../data/menuPeruvian.json'
 function PrepareOrder() {
+  console.log('menuPeruvian',menuPeruvian)
   return (
     <>
       <header>
@@ -19,30 +20,28 @@ function PrepareOrder() {
           </li>
         </ul>
       </header>
-      <div class="cont-card">
-        <div class="card">
-          <h3>Arepa Reina Pepiada</h3>
-          <img src="https://i.postimg.cc/2y4VJJSc/arepa.png" alt="" />
-          <span class="price">$1.200</span>
-        </div>
-        <div class="card">
-          <h3>Arepa Reina Pepiada</h3>
-          <img src="https://i.postimg.cc/2y4VJJSc/arepa.png" alt="" />
-          <span class="price">$1.200</span>
-        </div>
-        <div class="card">
-          <h3>Arepa Reina Pepiada</h3>
-          <img src="https://i.postimg.cc/2y4VJJSc/arepa.png" alt="" />
-          <span class="price">$1.200</span>
-        </div>
+
+      <div className="cont-card">
+        {
+          menuPeruvian.map( (value, key) =>{
+            return(
+
+            <div className="card" key={key+ 1}>
+              <h3>{value.name}</h3>
+              <img src={value.img} alt="" />
+              <span className="price">{value.price}</span>
+            </div>
+            )
+          })
+        }
       </div>
 
       <br />
       <br />
       <br />
 
-      <section class="section-menu">
-        <table class="table-menu">
+      <section className="section-menu">
+        <table className="table-menu">
           <thead>
             <tr>
               <th></th>
@@ -57,7 +56,7 @@ function PrepareOrder() {
               <td>Arepa Reina Pepiada</td>
               <td>$1.200</td>
               <td>
-                <div class="counter">
+                <div className="counter">
                   <button>
                     <img src="https://i.postimg.cc/hPydq8tr/menos.png" alt="" />
                   </button>
@@ -80,7 +79,7 @@ function PrepareOrder() {
               <td>Arepa Reina Pepiada</td>
               <td>$1.200</td>
               <td>
-                <div class="counter">
+                <div className="counter">
                   <button>
                     <img src="https://i.postimg.cc/hPydq8tr/menos.png" alt="" />
                   </button>
@@ -103,7 +102,7 @@ function PrepareOrder() {
               <td>Arepa Reina Pepiada</td>
               <td>$1.200</td>
               <td>
-                <div class="counter">
+                <div className="counter">
                   <button>
                     <img src="https://i.postimg.cc/hPydq8tr/menos.png" alt="" />
                   </button>
@@ -126,7 +125,7 @@ function PrepareOrder() {
               <td>Arepa Reina Pepiada</td>
               <td>$1.200</td>
               <td>
-                <div class="counter">
+                <div className="counter">
                   <button>
                     <img src="https://i.postimg.cc/hPydq8tr/menos.png" alt="" />
                   </button>
@@ -149,12 +148,12 @@ function PrepareOrder() {
         </table>
         <hr />
 
-        <div class="total">
+        <div className="total">
           <h4>Total:</h4>
           <span>$10.40</span>
         </div>
-        <div class="options">
-          <a class="btn" href="">
+        <div className="options">
+          <a className="btn" href="">
             COCINAR
           </a>
         </div>

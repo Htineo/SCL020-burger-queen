@@ -3,21 +3,21 @@
     "id": "1",
     "name": "Ceviche",
     "price": "10$",
-    "img": "",
+    "img": "https://i.postimg.cc/2y4VJJSc/arepa.png",
     "type": "menuvegetariano"
   },
   {
     "id": "2",
     "name": "Lomo Saltado",
     "price": "14$",
-    "img": "",
+    "img": "https://i.postimg.cc/2y4VJJSc/arepa.png",
     "type": "menuvegetariano"
   },
   {
     "id": "3",
     "name": "Causa Limeña",
     "price": "18$",
-    "img": "",
+    "img": "https://i.postimg.cc/2y4VJJSc/arepa.png",
     "type": "menuvegetariano"
   }
   

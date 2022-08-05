@@ -4,7 +4,7 @@ import "../index.css";
 function LogIn() {
   return (
     <>
-      <main class="login">
+      <main className="login">
         <img width="250" src="https://i.postimg.cc/6Q6NKZb9/logo.png" alt="" />
         <form>
           <input type="text" placeholder="Usuario" />

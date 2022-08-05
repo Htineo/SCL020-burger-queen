@@ -2,8 +2,8 @@ import {Link} from "react-router-dom";
 
 function TakeOrder() {
   return (
+  
     <>
-    <Layout>
 
       <main>
         <h2></h2>
@@ -16,7 +16,7 @@ function TakeOrder() {
         <Link to="/home">Home</Link>
         <Link to="/">Cerrar Sesión</Link>
       </nav>
-    </Layout>
+    
     </>
   );
 }

@@ -1,12 +1,36 @@
-import { Fragment } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 import menuPeruvian from '../data/menuPeruvian.json'
-function PrepareOrder() {
-  console.log('menuPeruvian',menuPeruvian)
-  return (
-    <>
+
+import "./PrepareOrder.css";
+import menuPeruano from "../data/data.json";
+import menuVenezolano from "../data/data2.json";
+
+import {
+  Tabs,
+  TabsHeader,
+  TabsBody,
+  Tab,
+  TabPanel,
+} from "@material-tailwind/react";
+
+const data = [
+  {
+    label: "Menú Peruano ",
+    value: "MenuPeruano",
+  },
+  {
+    label: "Menú Venezolano",
+    value: "MenuVenezolano",
+  },
+];
+
+const MenuView = () => {
+  
+ 
+  return (<>
       <header>
         <ul>
           <li>
@@ -160,5 +184,8 @@ function PrepareOrder() {
       </section>
     </>
   );
-}
-export default PrepareOrder;
+};
+export default MenuView;
+
+
+

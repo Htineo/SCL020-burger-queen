@@ -1,5 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Disclosure, Menu, Transition } from "@headlessui/react";
+import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
+import menuPeruvian from '../data/menuPeruvian.json'
+
 import "./PrepareOrder.css";
 import menuPeruano from "../data/data.json";
 import menuVenezolano from "../data/data2.json";
@@ -12,20 +16,21 @@ import {
   TabPanel,
 } from "@material-tailwind/react";
 
-const Menu = () => {
+const data = [
+  {
+    label: "Menú Peruano ",
+    value: "MenuPeruano",
+  },
+  {
+    label: "Menú Venezolano",
+    value: "MenuVenezolano",
+  },
+];
+
+const MenuView = () => {
   
-  const data = [
-    {
-      label: "Menú Peruano ",
-      value: "MenuPeruano",
-    },
-    {
-      label: "Menú Venezolano",
-      value: "MenuVenezolano",
-    },
-  ];
-  return (
-    <>
+ 
+  return (<>
       <header>
         <ul>
           <li>
@@ -39,110 +44,148 @@ const Menu = () => {
           </li>
         </ul>
       </header>
-      <Tabs value="MenuPeruano">
-        <TabsHeader>
-          {data.map(({ label, value }) => (
-            <Tab key={value} value={value}>
-              {label}
-            </Tab>
-          ))}
-        </TabsHeader>
-        <TabsBody>
-          <TabPanel key={"MenuPeruano"} value={"MenuPeruano"}>
-            <div class="cont-card">
-              {menuPeruano.map((item) => (
-                <div class="card">
-                  <h3>{item.name}</h3>
-                  <img src={item.img} alt="" />
-                  <span class="price">{item.price}</span>
-                </div>
-              ))}
-              ;
+
+      <div className="cont-card">
+        {
+          menuPeruvian.map( (value, key) =>{
+            return(
+
+            <div className="card" key={key+ 1}>
+              <h3>{value.name}</h3>
+              <img src={value.img} alt="" />
+              <span className="price">{value.price}</span>
             </div>
-          </TabPanel>
+            )
+          })
+        }
+      </div>
 
-          <TabPanel key={"MenuVenezolano"} value={"MenuVenezolano"}>
-            <div class="cont-card">
-              {menuVenezolano.map((item) => (
-                <div class="card">
-                  <h3>{item.name}</h3>
-                  <img src={item.img} alt="" />
-                  <span class="price">{item.price}</span>
+      <br />
+      <br />
+      <br />
+
+      <section className="section-menu">
+        <table className="table-menu">
+          <thead>
+            <tr>
+              <th></th>
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Arepa Reina Pepiada</td>
+              <td>$1.200</td>
+              <td>
+                <div className="counter">
+                  <button>
+                    <img src="https://i.postimg.cc/hPydq8tr/menos.png" alt="" />
+                  </button>
+                  <span>2</span>
+                  <button>
+                    <img src="https://i.postimg.cc/x8kSNSLq/mas.png" alt="" />
+                  </button>
                 </div>
-              ))}
-              ;
-            </div>
-          </TabPanel>
+              </td>
+              <td>
+                <button>
+                  <img
+                    src="https://i.postimg.cc/NG86ZrXJ/eliminar.png"
+                    alt=""
+                  />
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Arepa Reina Pepiada</td>
+              <td>$1.200</td>
+              <td>
+                <div className="counter">
+                  <button>
+                    <img src="https://i.postimg.cc/hPydq8tr/menos.png" alt="" />
+                  </button>
+                  <span>2</span>
+                  <button>
+                    <img src="https://i.postimg.cc/x8kSNSLq/mas.png" alt="" />
+                  </button>
+                </div>
+              </td>
+              <td>
+                <button>
+                  <img
+                    src="https://i.postimg.cc/NG86ZrXJ/eliminar.png"
+                    alt=""
+                  />
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Arepa Reina Pepiada</td>
+              <td>$1.200</td>
+              <td>
+                <div className="counter">
+                  <button>
+                    <img src="https://i.postimg.cc/hPydq8tr/menos.png" alt="" />
+                  </button>
+                  <span>2</span>
+                  <button>
+                    <img src="https://i.postimg.cc/x8kSNSLq/mas.png" alt="" />
+                  </button>
+                </div>
+              </td>
+              <td>
+                <button>
+                  <img
+                    src="https://i.postimg.cc/NG86ZrXJ/eliminar.png"
+                    alt=""
+                  />
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Arepa Reina Pepiada</td>
+              <td>$1.200</td>
+              <td>
+                <div className="counter">
+                  <button>
+                    <img src="https://i.postimg.cc/hPydq8tr/menos.png" alt="" />
+                  </button>
+                  <span>2</span>
+                  <button>
+                    <img src="https://i.postimg.cc/x8kSNSLq/mas.png" alt="" />
+                  </button>
+                </div>
+              </td>
+              <td>
+                <button>
+                  <img
+                    src="https://i.postimg.cc/NG86ZrXJ/eliminar.png"
+                    alt=""
+                  />
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <hr />
 
-          
-        </TabsBody>
-      </Tabs>
-
-      <nav>
-          <Link to="/delivery">Pedidos listos</Link>
-        </nav>
+        <div className="total">
+          <h4>Total:</h4>
+          <span>$10.40</span>
+        </div>
+        <div className="options">
+          <a className="btn" href="">
+            COCINAR
+          </a>
+        </div>
+      </section>
     </>
   );
 };
-export default Menu;
+export default MenuView;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// / import { Fragment } from "react";
-// import { Link } from "react-router-dom";
-// import { Disclosure, Menu, Transition } from "@headlessui/react";
-// import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
-
-
-// function PrepareOrder() {
-//   return (
-//     <>
-     
-//         <header className="bg-white shadow">
-//           <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-//             <h1 className="text-3xl font-bold text-gray-900">Servir Pedido</h1>
-//           </div>
-//         </header>
-//         <main>
-//           <h2></h2>
-//           <p>That feels like an existential question, don't you think?</p>
-//         </main>
-//         <nav>
-//           <Link to="/home">Home</Link>
-//           <Link to="/">Cerrar Sesión</Link>
-//         </nav>
-     
-//     </>
-//   );
-// }
-// export default PrepareOrder;

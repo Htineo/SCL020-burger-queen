@@ -4,21 +4,22 @@
     "name": "Ceviche",
     "price": 10,
     "img": "https://i.postimg.cc/2y4VJJSc/arepa.png",
-    "type": "menuvegetariano"
+    "type": "menuVenezuelan"
   },
   {
     "id": "2",
     "name": "Lomo Saltado",
     "price": 14,
     "img": "https://i.postimg.cc/2y4VJJSc/arepa.png",
-    "type": "menuvegetariano"
+    "type": "menuVenezuelan"
   },
   {
     "id": "3",
     "name": "Causa Limeña",
     "price": 18,
     "img": "https://i.postimg.cc/2y4VJJSc/arepa.png",
-    "type": "menuvegetariano"
+    "type": "menuVenezuelan"
   }
   
 ]
+

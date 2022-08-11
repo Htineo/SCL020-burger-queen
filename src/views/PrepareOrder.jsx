@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-// import { Link } from "react-router-dom";
-// import { Disclosure, Menu, Transition } from "@headlessui/react";
-// import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 import menuPeruvian from "../data/menuPeruvian.json";
 import menuVenezuelan from "../data/menuVenezuelan.json";
 import menuAggregates from "../data/menuAggregates.json";
 import "./PrepareOrder.css";
+
+// Material Tailwind Menú: Servir, Perfil y Cerrar Sesión
 
 import {
   Tabs,
@@ -105,7 +104,7 @@ const MenuView = () => {
       {/* Componente de los tres menús */}
 
       {/* componentes de tailwind: es una tabla de 1x3 */}
-      <Tabs value="menu">
+      <Tabs value="menuPeruvian">
         <TabsHeader>
           {data.map(({ label, value }) => (
             <Tab key={value} value={value}>
@@ -115,7 +114,7 @@ const MenuView = () => {
         </TabsHeader>
         <TabsBody>
           <TabPanel key={"menuPeruvian"} value={"menuPeruvian"}>
-            <div class="cont-card">
+            <div className="cont-card">
               {menuPeruvian.map((value, key) => {
                 return (
                   <div
@@ -124,7 +123,9 @@ const MenuView = () => {
                     onClick={() => cardClick(value)}
                   >
                     <h3>{value.name}</h3>
+                    <div className="cont-img">
                     <img src={value.img} alt="" />
+                    </div>
                     <span className="price">{value.price}</span>
                   </div>
                 );
@@ -133,12 +134,15 @@ const MenuView = () => {
           </TabPanel>
 
           <TabPanel key={"menuVenezuelan"} value={"menuVenezuelan"}>
-            <div class="cont-card">
+            <div className="cont-card">
               {menuVenezuelan.map((value, key) => {
                 return (
-                  <div className="card" key={key + 1}>
+                  <div className="card" key={key + 1}
+                  onClick={() => cardClick(value)}>
                     <h3>{value.name}</h3>
+                    <div className="cont-img">
                     <img src={value.img} alt="" />
+                    </div>
                     <span className="price">{value.price}</span>
                   </div>
                 );
@@ -147,12 +151,15 @@ const MenuView = () => {
           </TabPanel>
 
           <TabPanel key={"menuAggregates"} value={"menuAggregates"}>
-            <div class="cont-card">
+            <div className="cont-card">
               {menuAggregates.map((value, key) => {
                 return (
-                  <div className="card" key={key + 1}>
+                  <div className="card" key={key + 1}
+                  onClick={() => cardClick(value)}>
                     <h3>{value.name}</h3>
+                    <div className="cont-img">
                     <img src={value.img} alt="" />
+                    </div>
                     <span className="price">{value.price}</span>
                   </div>
                 );
@@ -180,7 +187,7 @@ const MenuView = () => {
           <tbody>
             {list.map((item, index) => {
               return (
-                <tr>
+                <tr key={index + 1}>
                   <td>{item.name}</td>
                   <td>{item.price}</td>
                   <td>{list[index].price * list[index].counter} </td>

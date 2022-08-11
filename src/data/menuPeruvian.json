@@ -3,22 +3,22 @@
     "id": "1",
     "name": "Ceviche",
     "price": 10,
-    "img": "https://i.postimg.cc/2y4VJJSc/arepa.png",
-    "type": "menuvegetariano"
+    "img": "./src/assets/ceviche.jpg",
+    "type": "menuPeruvian"
   },
   {
     "id": "2",
     "name": "Lomo Saltado",
     "price": 14,
-    "img": "https://i.postimg.cc/2y4VJJSc/arepa.png",
-    "type": "menuvegetariano"
+    "img": "./src/assets/lomo-saltado.jpg",
+    "type": "menuPeruvian"
   },
   {
     "id": "3",
-    "name": "Causa Limeña",
+    "name": "Locro de zapallo",
     "price": 18,
-    "img": "https://i.postimg.cc/2y4VJJSc/arepa.png",
-    "type": "menuvegetariano"
+    "img": "./src/assets/locro-de-zapallo.jpg",
+    "type": "menuPeruvian"
   }
   
 ]

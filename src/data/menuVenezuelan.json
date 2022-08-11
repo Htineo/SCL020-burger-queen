@@ -1,25 +1,24 @@
 [
   {
-    "id": "1",
-    "name": "Ceviche",
+    "id": "4",
+    "name": "Arepa Reyna Pepiada",
     "price": 10,
-    "img": "https://i.postimg.cc/2y4VJJSc/arepa.png",
+    "img": "./src/assets/arepa-aceviche.jpg",
     "type": "menuVenezuelan"
   },
   {
-    "id": "2",
-    "name": "Lomo Saltado",
+    "id": "5",
+    "name": "Arepa carne mechada",
     "price": 14,
-    "img": "https://i.postimg.cc/2y4VJJSc/arepa.png",
+    "img": "./src/assets/arepa-pabellon.jpeg",
     "type": "menuVenezuelan"
   },
   {
-    "id": "3",
-    "name": "Causa Limeña",
+    "id": "6",
+    "name": "Arepa de Pollo",
     "price": 18,
-    "img": "https://i.postimg.cc/2y4VJJSc/arepa.png",
+    "img": "./src/assets/carne-mechada-apepa.jpg",
     "type": "menuVenezuelan"
   }
-  
 ]
 
